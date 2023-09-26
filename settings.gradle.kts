@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "AndroidUtilities"
 include(":app")
-include(":DeviceInformation")
+include(":deviceInformation")
