@@ -11,15 +11,18 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.giovankov.androidutilities.ui.theme.AndroidUtilitiesTheme
-import com.giovankov.deviceInformation.Test
-import com.giovankov.deviceInformation.drinkString
+import com.giovankov.deviceInformation.brand
+import com.giovankov.deviceInformation.buildId
+import com.giovankov.deviceInformation.device
+import com.giovankov.deviceInformation.manufacturer
+import com.giovankov.deviceInformation.model
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             AndroidUtilitiesTheme {
-                val b = Test().laughString()
+                val b = brand()
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
@@ -35,7 +38,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "${drinkString()} $name!",
+        text = "${manufacturer()} $name ${device()}",
         modifier = modifier
     )
 }
