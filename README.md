@@ -9,18 +9,18 @@ Minimum Android SDK = 21
 Go to `settings.gradle.kts` (for project with Kotlin DSL) or `build.gradle`  in project level (for project with Groovy) and add jitpack as maven URL.
 #### Gradle with Kotlin Project
 ```kotlin
-dependencyResolutionManagement {  
-    repositories {  
-		maven { setUrl("https://jitpack.io") }  
-	}
+dependencyResolutionManagement {
+    repositories {
+        maven { setUrl("https://jitpack.io") }
+    }
 }
 ```
 #### or, Gradle with Groovy Project
 ```kotlin
 buildscript {
-	repositories {
-        maven { url 'https://jitpack.io' }  
-	}
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
 }
 ```
 ### Import our library
@@ -31,19 +31,19 @@ implementation 'com.github.giovankabisano:AndroidUtilities:1.0.4'
 ## Features
 ### Basic Device Information
 #### Model
-```
+``` kotlin
 import com.giovankov.deviceInformation.model
 val x = model() 
 print(x) //m2012k11ag
 ```
 #### Manufacturer
-```
+``` kotlin
 import com.giovankov.deviceInformation.manufacturer
 val x = manufacturer()
 print(x) //Xiaomi
 ```
 #### Brand
-```
+``` kotlin
 import com.giovankov.deviceInformation.brand
 val x = brand()
 print(x) //POCO
