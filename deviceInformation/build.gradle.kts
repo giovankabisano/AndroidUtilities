@@ -47,7 +47,7 @@ afterEvaluate {
 
                 groupId = "com.giovankov.androidUtilities"
                 artifactId = "deviceInformation"
-                version = "1.0.0"
+                version = "1.0.4"
             }
         }
     }
